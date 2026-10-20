@@ -2,20 +2,20 @@
 
 :root {
   font-family: 'DM Sans', 'Segoe UI', sans-serif;
-  color: #202923;
-  background: #f4f6f2;
+  color: #141a15;
+  background: #ffffff;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --ink: #202923;
-  --muted: #8b958e;
-  --line: #edf0eb;
-  --green: #177b47;
-  --deep-green: #12663b;
-  --mint: #e6f3e9;
-  --pale: #f7f8f5;
+  --ink: #141a15;
+  --muted: #68736b;
+  --line: #e5eae6;
+  --green: #174b2b;
+  --deep-green: #103820;
+  --mint: #edf4ee;
+  --pale: #f7f9f7;
   --heading-font: 'Manrope', 'DM Sans', sans-serif;
 }
 
@@ -41,13 +41,13 @@ button {
 button:focus-visible,
 a:focus-visible,
 input:focus-visible {
-  outline: 3px solid #9fcead;
+  outline: 3px solid #6b9875;
   outline-offset: 3px;
 }
 
 ::selection {
-  color: #12532f;
-  background: #d5ebda;
+  color: #ffffff;
+  background: #174b2b;
 }
 
 #root {

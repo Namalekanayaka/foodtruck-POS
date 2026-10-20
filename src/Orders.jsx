@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react'
 
 const orderFilters = ['All orders', 'Preparing', 'Ready']
 
-function Orders({ Icon, onStatusChange, orders, view }) {
+function Orders({ Icon, formatPrice, onStatusChange, orders, view }) {
   const [activeFilter, setActiveFilter] = useState('All orders')
   const isHistory = view === 'Order history'
   const visibleOrders = useMemo(() => {
@@ -85,7 +85,12 @@ function Orders({ Icon, onStatusChange, orders, view }) {
                     <h3>{order.name}</h3>
                     <p>{order.type || 'Pickup'} <span>·</span> {order.items} item{order.items === 1 ? '' : 's'}</p>
                   </div>
-                  <span className="order-card-time"><Icon name="clock" size={14} />{order.time || 'Today'}</span>
+                  <div className="order-card-meta">
+                    {Number.isInteger(order.totalCents) && (
+                      <strong className="order-card-total">{formatPrice(order.totalCents / 100)}</strong>
+                    )}
+                    <span className="order-card-time"><Icon name="clock" size={14} />{order.time || 'Today'}</span>
+                  </div>
                 </div>
                 {order.status !== 'Completed' && (
                   <button

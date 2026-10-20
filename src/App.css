@@ -933,6 +933,20 @@
   margin: 6px 0 9px;
 }
 
+.order-card-meta {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.order-card-total {
+  color: #174b2b;
+  font-size: 11px;
+  font-weight: 800;
+}
+
 .order-card-main h3 {
   margin: 0 0 4px;
   color: #303a33;
@@ -1420,6 +1434,35 @@
   color: #a6b2a9;
   background: #e8eee8;
   box-shadow: none;
+  cursor: not-allowed;
+}
+
+.print-bill-button {
+  display: flex;
+  min-height: 38px;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 8px;
+  border: 1px solid #e9eee9;
+  border-radius: 9px;
+  color: #617168;
+  background: #fff;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 700;
+  transition: border-color .18s ease, color .18s ease, background .18s ease;
+}
+
+.print-bill-button:hover:not(:disabled) {
+  border-color: #c5ddca;
+  color: #267749;
+  background: #f7faf7;
+}
+
+.print-bill-button:disabled {
+  color: #a6b2a9;
+  background: #f3f5f2;
   cursor: not-allowed;
 }
 
@@ -2031,5 +2074,764 @@
 
   .queue-order {
     min-width: 132px;
+  }
+}
+
+.pos-shell {
+  color: #edf4ee;
+  background: #080b09;
+  box-shadow: 0 16px 56px rgb(0 0 0 / 45%);
+}
+
+.sidebar,
+.catalog,
+.order-panel,
+.kitchen-queue {
+  border-color: #26352b;
+  background: #0c110e;
+}
+
+.truck-status,
+.orders-live-badge {
+  border-color: #203c29;
+  color: #a7c7ad;
+  background: #101b13;
+}
+
+.nav-label,
+.nav-item,
+.sidebar-footer,
+.subheading,
+.section-note,
+.category-count,
+.product-detail,
+.add-hint,
+.fresh-badge,
+.payment-heading > span,
+.secure-note,
+.queue-title > div:last-child > span,
+.queue-order-info small,
+.order-card-main p,
+.order-card-time {
+  color: #95a59a;
+}
+
+.nav-item:hover,
+.filter-button:hover,
+.icon-button:hover {
+  color: #82aa87;
+  background: #142219;
+}
+
+.nav-item.is-active,
+.category-card.is-selected,
+.payment-option.is-selected,
+.orders-filter button.is-selected {
+  color: #82aa87;
+  border-color: #285638;
+  background: #14251a;
+}
+
+.brand,
+.topbar h1,
+.section-heading h2,
+.orders-list-heading h2,
+.order-stat-copy strong,
+.order-card-main h3,
+.product-title-row h3,
+.order-header h2,
+.cart-heading h3,
+.payment-heading h3,
+.order-summary .summary-total,
+.summary-total strong:first-child,
+.queue-title strong,
+.queue-order-info strong {
+  color: #edf4ee;
+}
+
+.brand-copy small,
+.staff-copy small,
+.order-number,
+.order-header p,
+.cart-item-info > span,
+.order-summary > div,
+.order-summary small,
+.queue-link {
+  color: #95a59a;
+}
+
+.nav-badge,
+.search-box,
+.search-box kbd,
+.category-card,
+.category-icon,
+.product-card,
+.order-stat-card,
+.order-card,
+.order-type-switch,
+.payment-option,
+.quantity-control,
+.cart-quantity,
+.cart-item,
+.empty-cart,
+.queue-order,
+.filter-button,
+.icon-button,
+.orders-filter {
+  border-color: #26352b;
+  background: #111813;
+}
+
+.search-box {
+  color: #aab9ae;
+}
+
+.search-box input {
+  color: #edf4ee;
+}
+
+.search-box input::placeholder,
+.search-box kbd,
+.category-name,
+.product-title-row h3 {
+  color: #b9c6bc;
+}
+
+.category-card:hover,
+.product-card:hover,
+.order-card:hover {
+  border-color: #34583e;
+}
+
+.category-card.is-selected .category-icon,
+.category-icon {
+  color: #82aa87;
+  background: #17291c;
+}
+
+.category-name {
+  color: #d8e2da;
+}
+
+.product-card.in-cart {
+  border-color: #34764a;
+}
+
+.product-image-wrap,
+.cart-thumb {
+  background: #172119;
+}
+
+.product-tag {
+  border-color: rgb(20 32 23 / 80%);
+  color: #cfe6d2;
+  background: rgb(12 20 14 / 92%);
+}
+
+.veg-mark {
+  border-color: #34764a;
+  color: #82aa87;
+}
+
+.product-price,
+.order-stat-icon.is-ready,
+.order-stat-icon.is-completed,
+.cart-line-total,
+.summary-total strong:last-child,
+.payment-option:hover,
+.order-status.is-ready,
+.order-completed-note {
+color: #82aa87;
+}
+
+.quantity-control,
+.cart-quantity {
+  background: #101a13;
+}
+
+.quantity-control button,
+.cart-quantity button {
+  color: #82aa87;
+  background: #1b3523;
+}
+
+.quantity-control button:hover,
+.cart-quantity button:hover {
+  color: #fff;
+  background: #166534;
+}
+
+.empty-menu,
+.orders-empty,
+.empty-cart {
+  color: #a1b0a5;
+}
+
+.empty-menu strong,
+.orders-empty strong,
+.empty-cart strong {
+  color: #dce7de;
+}
+
+.empty-menu p,
+.orders-empty p,
+.empty-cart > span:last-child {
+  color: #95a59a;
+}
+
+.order-stat-icon.is-preparing,
+.queue-id,
+.avatar,
+.staff-avatar {
+  color: #d0ebd4;
+  background: #1b3020;
+}
+
+.order-stat-icon.is-ready,
+.order-stat-icon.is-completed,
+.queue-icon,
+.empty-cart-icon,
+.empty-icon {
+  color: #82aa87;
+  background: #17291c;
+}
+
+.orders-filter button {
+  color: #a5b2a8;
+}
+
+.order-status.is-preparing {
+  color: #c7b984;
+  background: #2a2618;
+}
+
+.order-status.is-ready {
+  color: #82aa87;
+  background: #17291c;
+}
+
+.order-status.is-completed {
+  color: #a8b9ab;
+  background: #18211a;
+}
+
+.order-action {
+  border-color: #285638;
+  color: #82aa87;
+  background: #14251a;
+}
+
+.order-action:hover {
+  border-color: #34764a;
+  background: #1a3321;
+}
+
+.order-action.is-complete,
+.place-order-button {
+  border-color: #166534;
+  color: #f0fdf4;
+  background: #166534;
+}
+
+.order-action.is-complete:hover,
+.place-order-button:not(:disabled):hover,
+.quick-add:hover {
+  border-color: #1b5e35;
+  background: #1b5e35;
+}
+
+.order-completed-note {
+  border-color: #26352b;
+  background: #111813;
+}
+
+.order-number-dot,
+.status-dot,
+.green-indicator,
+.eyebrow-dot {
+  background: #527d59;
+}
+
+.live-label,
+.text-button,
+.queue-link {
+  color: #82aa87;
+}
+
+.text-button:hover,
+.queue-link:hover {
+  color: #a2c5a6;
+}
+
+.order-type-switch button {
+  color: #a5b2a8;
+}
+
+.order-type-switch button.is-selected {
+  color: #82aa87;
+  background: #1a3321;
+}
+
+.cart-heading h3 span {
+  color: #82aa87;
+  background: #1b3523;
+}
+
+.cart-item-info > strong {
+  color: #dce7de;
+}
+
+.clear-button {
+  color: #c99a8d;
+}
+
+.clear-button:hover {
+  color: #ff9b8e;
+}
+
+.order-summary,
+.payment-section {
+  border-color: #26352b;
+}
+
+.order-summary .summary-total {
+  border-color: #35473a;
+}
+
+.payment-option {
+  color: #a5b2a8;
+}
+
+.place-order-button:disabled {
+  color: #8d9a90;
+  background: #202a22;
+}
+
+.secure-note svg {
+  color: #527d59;
+}
+
+.queue-status {
+  color: #d2c895;
+  background: #2a2618;
+}
+
+.queue-status.is-ready {
+  color: #82aa87;
+  background: #17291c;
+}
+
+.toast-message {
+  border-color: #285638;
+  color: #c9f3d0;
+  background: #101d14;
+}
+
+.print-bill-button {
+  border-color: #26352b;
+  color: #b4c2b7;
+  background: #111813;
+}
+
+.print-bill-button:hover:not(:disabled) {
+  border-color: #34583e;
+  color: #82aa87;
+  background: #142219;
+}
+
+.print-bill-button:disabled {
+  border-color: #26352b;
+  color: #78867b;
+  background: #151b16;
+}
+
+@media (max-width: 740px) {
+  .sidebar {
+    border-bottom-color: #26352b;
+    background: #0c110e;
+    box-shadow: 0 4px 15px rgb(0 0 0 / 30%);
+  }
+
+  .order-panel,
+  .kitchen-queue {
+    border-top-color: #172219;
+  }
+}
+
+.pos-shell {
+  color: #141a15;
+  background: #fff;
+  box-shadow: 0 16px 56px rgb(15 35 20 / 8%);
+}
+
+.sidebar,
+.catalog,
+.order-panel,
+.kitchen-queue {
+  border-color: #e5eae6;
+  background: #fff;
+}
+
+.brand,
+.topbar h1,
+.section-heading h2,
+.orders-list-heading h2,
+.order-stat-copy strong,
+.order-card-main h3,
+.product-title-row h3,
+.order-header h2,
+.cart-heading h3,
+.payment-heading h3,
+.order-summary .summary-total,
+.summary-total strong:first-child,
+.queue-title strong,
+.queue-order-info strong,
+.cart-item-info > strong,
+.empty-menu strong,
+.orders-empty strong,
+.empty-cart strong {
+  color: #141a15;
+}
+
+.nav-label,
+.nav-item,
+.sidebar-footer,
+.brand-copy small,
+.staff-copy small,
+.subheading,
+.section-note,
+.category-count,
+.product-detail,
+.add-hint,
+.fresh-badge,
+.payment-heading > span,
+.secure-note,
+.queue-title > div:last-child > span,
+.queue-order-info small,
+.order-number,
+.order-header p,
+.cart-item-info > span,
+.order-summary > div,
+.order-summary small,
+.order-card-main p,
+.order-card-time {
+  color: #68736b;
+}
+
+.truck-status,
+.orders-live-badge {
+  border-color: #dce8de;
+  color: #285737;
+  background: #f4f8f4;
+}
+
+.nav-item:hover,
+.filter-button:hover,
+.icon-button:hover {
+  color: #174b2b;
+  background: #f1f6f1;
+}
+
+.nav-item.is-active,
+.category-card.is-selected,
+.payment-option.is-selected,
+.orders-filter button.is-selected,
+.order-type-switch button.is-selected {
+  border-color: #c9ddcc;
+  color: #174b2b;
+  background: #edf4ee;
+}
+
+.nav-badge,
+.search-box,
+.search-box kbd,
+.category-card,
+.category-icon,
+.product-card,
+.order-stat-card,
+.order-card,
+.order-type-switch,
+.payment-option,
+.quantity-control,
+.cart-quantity,
+.cart-item,
+.empty-cart,
+.queue-order,
+.filter-button,
+.icon-button,
+.orders-filter {
+  border-color: #e5eae6;
+  background: #fff;
+}
+
+.search-box {
+  color: #68736b;
+}
+
+.search-box input {
+  color: #141a15;
+}
+
+.search-box input::placeholder,
+.search-box kbd {
+  color: #879188;
+}
+
+.category-card:hover,
+.product-card:hover,
+.order-card:hover {
+  border-color: #b8cfbc;
+}
+
+.category-card.is-selected .category-icon,
+.category-icon,
+.order-stat-icon.is-ready,
+.order-stat-icon.is-completed,
+.queue-icon,
+.empty-cart-icon,
+.empty-icon,
+.order-status.is-ready,
+.order-status.is-completed {
+  color: #174b2b;
+  background: #edf4ee;
+}
+
+.category-name {
+  color: #273129;
+}
+
+.product-card.in-cart {
+  border-color: #8fb498;
+}
+
+.product-image-wrap,
+.cart-thumb {
+  background: #f0f3ef;
+}
+
+.product-tag {
+  border-color: rgb(255 255 255 / 75%);
+  color: #273129;
+  background: rgb(255 255 255 / 94%);
+}
+
+.veg-mark {
+  border-color: #8fb498;
+  color: #174b2b;
+}
+
+.product-price,
+.cart-line-total,
+.summary-total strong:last-child,
+.payment-option:hover,
+.order-completed-note {
+  color: #174b2b;
+}
+
+.quantity-control,
+.cart-quantity {
+  background: #f7f9f7;
+}
+
+.quantity-control button,
+.cart-quantity button {
+  color: #174b2b;
+  background: #eaf2eb;
+}
+
+.quantity-control button:hover,
+.cart-quantity button:hover {
+  color: #fff;
+  background: #174b2b;
+}
+
+.empty-menu,
+.orders-empty,
+.empty-cart {
+  color: #68736b;
+}
+
+.empty-menu p,
+.orders-empty p,
+.empty-cart > span:last-child {
+  color: #68736b;
+}
+
+.order-stat-icon.is-preparing,
+.queue-id,
+.avatar,
+.staff-avatar {
+  color: #3e493f;
+  background: #f1eee3;
+}
+
+.orders-filter button,
+.order-type-switch button,
+.payment-option {
+  color: #68736b;
+}
+
+.order-status.is-preparing {
+  color: #78622e;
+  background: #f5f0e2;
+}
+
+.order-action {
+  border-color: #c9ddcc;
+  color: #174b2b;
+  background: #f1f6f1;
+}
+
+.order-action:hover {
+  border-color: #a8c7ad;
+  background: #e8f1e9;
+}
+
+.order-action.is-complete,
+.place-order-button {
+  border-color: #174b2b;
+  color: #fff;
+  background: #174b2b;
+}
+
+.order-action.is-complete:hover,
+.place-order-button:not(:disabled):hover,
+.quick-add:hover {
+  border-color: #103820;
+  background: #103820;
+}
+
+.order-completed-note {
+  border-color: #e5eae6;
+  background: #f7f9f7;
+}
+
+.status-dot,
+.green-indicator,
+.eyebrow-dot,
+.order-number-dot {
+  background: #287343;
+}
+
+.live-label,
+.text-button,
+.queue-link {
+  color: #174b2b;
+}
+
+.text-button:hover,
+.queue-link:hover {
+  color: #103820;
+}
+
+.cart-heading h3 span {
+  color: #174b2b;
+  background: #edf4ee;
+}
+
+.clear-button {
+  color: #89675e;
+}
+
+.clear-button:hover {
+  color: #a53c32;
+}
+
+.order-summary,
+.payment-section {
+  border-color: #e5eae6;
+}
+
+.order-summary .summary-total {
+  border-color: #dce4dd;
+}
+
+.place-order-button:disabled {
+  color: #8b968d;
+  background: #edf0ed;
+}
+
+.secure-note svg {
+  color: #287343;
+}
+
+.queue-status {
+  color: #78622e;
+  background: #f5f0e2;
+}
+
+.queue-status.is-ready {
+  color: #174b2b;
+  background: #edf4ee;
+}
+
+.toast-message {
+  border-color: #c9ddcc;
+  color: #174b2b;
+  background: #f4f8f4;
+}
+
+.print-bill-button {
+  border-color: #dce4dd;
+  color: #273129;
+  background: #fff;
+}
+
+.print-bill-button:hover:not(:disabled) {
+  border-color: #a8c7ad;
+  color: #174b2b;
+  background: #f4f8f4;
+}
+
+.print-bill-button:disabled {
+  border-color: #e5eae6;
+  color: #8b968d;
+  background: #f7f9f7;
+}
+
+.print-bill-button,
+.download-bill-button {
+  display: flex;
+  width: 100%;
+  min-height: 38px;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 8px;
+  border: 1px solid #dce4dd;
+  border-radius: 9px;
+  color: #273129;
+  background: #fff;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 700;
+  transition: border-color .18s ease, color .18s ease, background .18s ease;
+}
+
+.print-bill-button:hover:not(:disabled),
+.download-bill-button:hover:not(:disabled) {
+  border-color: #a8c7ad;
+  color: #174b2b;
+  background: #f4f8f4;
+}
+
+.print-bill-button:disabled,
+.download-bill-button:disabled {
+  border-color: #e5eae6;
+  color: #8b968d;
+  background: #f7f9f7;
+  cursor: not-allowed;
+}
+
+@media (max-width: 740px) {
+  .sidebar {
+    border-bottom-color: #e5eae6;
+    background: #fff;
+    box-shadow: 0 4px 15px rgb(15 35 20 / 5%);
+  }
+
+  .order-panel,
+  .kitchen-queue {
+    border-top-color: #e5eae6;
   }
 }
